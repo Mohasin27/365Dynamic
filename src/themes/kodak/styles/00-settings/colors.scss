@@ -8,6 +8,7 @@ $msv-pink: #FCDFDF;
 $msv-cyan: #0776D1;
 $msv-yellow:#FFFF00;
 $msv-grey: #323130;
+$msv-lightgrey: #555555;
 
 $msv-gray-100: #F8F7F6;
 $msv-gray-200: #E8E8E8;
@@ -19,7 +20,7 @@ $msv-gray-900: #1D1D1D;
 $msv-gray-1000: #2D2D2D;
 $msv-gray-tint: #495057;
 
-$msv-primary: #4C833A;
+$msv-primary: #eb000f;
 $msv-primary-hover: #39632C;
 $msv-secondary: #6C757D;
 $msv-secondary-hover: #E1EFDC;
@@ -57,7 +58,7 @@ $msv-unfilled-rating-color: $msv-gray-800;
     --msv-bg-color: #{$msv-gray-100};
 
     // Font
-    --msv-font-primary-color: #{$msv-black};
+    --msv-font-primary-color: #{$msv-lightgrey};
     --msv-font-secondary-color: #{$msv-white};
 
     // Borders

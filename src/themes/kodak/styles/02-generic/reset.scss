@@ -9,7 +9,7 @@ body {
     font-family: $msv-primary-font-family;
     background: var(--msv-bg-color);
     color: var(--msv-font-primary-color);
-    font-size: var(--msv-body-font-size-m);
+    font-size: var(--msv-body-font-size-s);
 
     @include fabrikam-font();
     min-height: 100vh;

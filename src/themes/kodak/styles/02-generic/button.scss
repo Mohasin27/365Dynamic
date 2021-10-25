@@ -22,8 +22,7 @@ $msv-btn-vertical-padding: 12px;
     }
 }
 
-@mixin primary-button($bg-color: var(--msv-accent-brand-color),
-$color: var(--msv-font-secondary-color), $border-color: var(--msv-accent-brand-color)) {
+@mixin primary-button($bg-color: var(--msv-accent-brand-color), $color: var(--msv-font-secondary-color), $border-color: var(--msv-accent-brand-color)) {
     background-color: $bg-color;
     border: 1px solid $border-color;
     color: $color;
@@ -32,8 +31,9 @@ $color: var(--msv-font-secondary-color), $border-color: var(--msv-accent-brand-c
 
     &:hover,
     &:focus {
-        background-color: var(--msv-accent-brand-alt-color);
-        border-color: var(--msv-accent-brand-alt-color);
+        background-color: var(--msv-font-secondary-color);
+        border-color: var(--msv-accent-brand-color);
+        color: var(--msv-accent-brand-color);
     }
 
     &:disabled,
