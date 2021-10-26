@@ -29,7 +29,7 @@ $homepage-hero-title-line-height: 1.2;
         top: 0;
 
         .ms-content-block__title {
-            @include fabrikam-font(var(--msv-font-weight-normal),
+            @include kodak-font(var(--msv-font-weight-normal),
             var(--msv-hero-heading-size) ,$homepage-hero-title-line-height, none, $msv-font-cinzel);
             color: var(--msv-hero-textheme-dark);
         }

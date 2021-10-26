@@ -11,7 +11,7 @@ body {
     color: var(--msv-font-primary-color);
     font-size: var(--msv-body-font-size-s);
 
-    @include fabrikam-font();
+    @include kodak-font();
     min-height: 100vh;
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;

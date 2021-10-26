@@ -1,6 +1,6 @@
 {
 	"$type": "themeModule",
-	"friendlyName": "Fabrikam (COPY)",
+	"friendlyName": "Kodak",
 	"name": "kodak",
-	"description": "This is fabrikam-theme theme."
+	"description": "This is kodak-theme theme."
 }

@@ -1,8 +1,8 @@
 {
     "$type": "styleDefinition",
-    "friendlyName": "Fabrikam theme style preset",
-    "name": "fabrikam",
-    "description": "This is fabrikam style preset",
+    "friendlyName": "Kodak theme style preset",
+    "name": "kodak",
+    "description": "This is kodak style preset",
     "global": {
         "msv-bg-color": {
             "friendlyName": "Background",

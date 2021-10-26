@@ -35,7 +35,7 @@ $msv-icon-size: 24px;
 $msv-text-size: $msv-font-size-m;
 $msv-text-line-height: 20px;
 
-@mixin fabrikam-font(
+@mixin kodak-font(
     $font-weight: $msv-font-weight-normal,
     $font-size: $msv-font-size-s,
     $line-height: $msv-line-height-s,
@@ -51,7 +51,7 @@ $msv-text-line-height: 20px;
 
 @mixin font-content($font-weight: $msv-font-weight-normal,
 $font-size: $msv-font-size-s, $line-height: $msv-line-height-s, $text-transform: none) {
-    @include fabrikam-font($font-weight, $font-size, $line-height, $text-transform);
+    @include kodak-font($font-weight, $font-size, $line-height, $text-transform);
 }
 
 @mixin font-content-underline($font-weight: $msv-font-weight-normal,
@@ -101,29 +101,29 @@ $font-size: $msv-font-size-s, $line-height: $msv-line-height-s) {
     @include font-content($font-weight, $msv-font-size-xxl, $msv-line-height-xxl);
 }
 
-@mixin fabrikam-display($font-size: $msv-title-font-size-xs,
+@mixin kodak-display($font-size: $msv-title-font-size-xs,
 $line-height: $msv-title-line-height-xs, $font-family: $msv-font-allerta) {
-    @include fabrikam-font($font-weight-normal, $font-size, $line-height, uppercase, $font-family);
+    @include kodak-font($font-weight-normal, $font-size, $line-height, uppercase, $font-family);
 }
 
 @mixin font-display-xs() {
-    @include fabrikam-display();
+    @include kodak-display();
 }
 
 @mixin font-display-s() {
-    @include fabrikam-display($msv-title-font-size-s, $msv-title-line-height-s);
+    @include kodak-display($msv-title-font-size-s, $msv-title-line-height-s);
 }
 
 @mixin font-display() {
     letter-spacing: 0.05em;
 
-    @include fabrikam-display($msv-title-font-size-m, $msv-title-line-height-m, $msv-font-cinzel);
+    @include kodak-display($msv-title-font-size-m, $msv-title-line-height-m, $msv-font-cinzel);
 }
 
 @mixin font-display-l() {
     letter-spacing: 0.05em;
 
-    @include fabrikam-display($msv-title-font-size-l, $msv-title-line-height-l, $msv-font-cinzel);
+    @include kodak-display($msv-title-font-size-l, $msv-title-line-height-l, $msv-font-cinzel);
 }
 
 @mixin font-glyph-standard() {

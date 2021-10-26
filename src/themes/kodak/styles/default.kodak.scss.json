@@ -1,8 +1,8 @@
 {
     "$type": "styleDefinition",
-    "name": "default.fabrikam",
-    "friendlyName": "Fabrikam theme - default style preset",
-    "description": "This is a fabrikam default theme style preset",
+    "name": "default.kodak",
+    "friendlyName": "Kodak theme - default style preset",
+    "description": "This is a kodak default theme style preset",
     "global": {},
     "modules": {
         "header": {
