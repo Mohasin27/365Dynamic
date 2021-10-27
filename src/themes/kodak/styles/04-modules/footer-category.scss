@@ -20,14 +20,13 @@ $footer-categoty-back-to-top-max-width: 0;
 $footer-placeholder-image-width: 24px;
 
 :root {
-    --msv-footer-bg: var(--msv-bg-color);
+    --msv-footer-bg: var(--msv-footer-bg-color);
     // Headings
-    --msv-footer-heading-font-color: var(--msv-font-primary-color);
+    --msv-footer-heading-font-color: var(--msv-footer-text-color);
     --msv-footer-heading-font-size: var(--msv-body-font-size-l);
-
     //Links
-    --msv-footer-link-font-color: var(--msv-font-primary-color);
-    --msv-footer-link-font-size: var(--msv-body-font-size-m);
+    --msv-footer-link-font-color: var(--msv-footer-text-color);
+    --msv-footer-link-font-size: var(--msv-body-font-size-xs);
 }
 
 footer {
@@ -108,8 +107,7 @@ footer {
             div, &__text {
                 color: var(--msv-footer-link-font-color);
                 font-size: var(--msv-footer-link-font-size);
-                font-weight: var(--msv-font-weight-normal);
-                line-height: $msv-line-height-m;
+                font-weight: var(--msv-font-weight-xlight);
             }
         }
 
