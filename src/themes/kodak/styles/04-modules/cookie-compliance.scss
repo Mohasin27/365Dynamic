@@ -2,6 +2,7 @@
 $cookie-compliance_container-padding-l: 60px;
 $cookie-compliance_container-padding-m: 20px;
 $cookie-compliance_container-padding-s: 16px;
+$cookie-compliance_container-padding-tb: 7px;
 $cookie-compliance_container-max-width: $msv-breakpoint-xl;
 $cookie-compliance_content-width:100%;
 $cookie-compliance_accept-btn-margin-left: 48px;
@@ -18,7 +19,7 @@ $cookie-compliance_accept-content-margin-bottom-mobile:24px;
 
     // font
     --msv-cookie-compliance-font-color: var(--msv-font-primary-color);
-    --msv-cookie-compliance-font-size: var(--msv-body-font-size-xxs);
+    --msv-cookie-compliance-font-size: var(--msv-body-font-size-xs);
 
     // link
     --msv-cookie-compliance-link-color: var(--msv-font-primary-color);
@@ -30,14 +31,14 @@ $cookie-compliance_accept-content-margin-bottom-mobile:24px;
 }
 
 .ms-cookie-compliance {
-    background-color: var(--msv-cookie-compliance-bg-color);
+    background-color: var(--msv-cookie-bgcolor);
     color: var(--msv-cookie-compliance-font-color);
     font-size: var(--msv-cookie-compliance-font-size);
 
     &__container {
         display: flex;
         font-weight: normal;
-        max-width: $cookie-compliance_container-max-width;
+        //max-width: $cookie-compliance_container-max-width;
         margin: 0 auto;
 
         @media screen and (min-width: $msv-breakpoint-s) {
@@ -57,11 +58,11 @@ $cookie-compliance_accept-content-margin-bottom-mobile:24px;
 
     &__accept-button {
         float: right;
-        margin-left: $cookie-compliance_accept-btn-margin-left;
-        width: $cookie-compliance_accept-btn-width;
-
-        @include primary-button(var(--msv-cookie-compliance-primary-btn-bg),
-        var(--msv-cookie-compliance-primary-btn-font-color), var(--msv-cookie-compliance-primary-btn-border));
+        height: auto;
+        padding-top:$cookie-compliance_container-padding-tb!important;
+        padding-bottom:$cookie-compliance_container-padding-tb!important;
+        font-size: var(--msv-cookie-compliance-font-size);
+        @include primary-button(var(--msv-cookie-compliance-primary-btn-bg), var(--msv-cookie-compliance-primary-btn-font-color), var(--msv-cookie-compliance-primary-btn-border));
     }
 
     &__cta-layer .link {

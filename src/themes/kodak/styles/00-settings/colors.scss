@@ -10,6 +10,7 @@ $msv-cyan: #0776D1;
 $msv-yellow:#FFFF00;
 $msv-grey: #323130;
 $msv-lightgrey: #555555;
+$msv-cookie-bgcolor: #e0e0e0;
 
 $msv-gray-100: #F8F7F6;
 $msv-gray-200: #E8E8E8;
@@ -86,4 +87,6 @@ $footer-text-color:#d6d6d6;
     --msv-selected-hovered-button-background: #{$msv-selected-hovered-button-background};
     // Footer
     --msv-footer-text-color: #{$footer-text-color};
+    //cookie Background
+    --msv-cookie-bgcolor: #{$msv-cookie-bgcolor};
 }

@@ -9,7 +9,7 @@ $navigation-menu-item-height: 48px;
 $navigation-menu-item-line-height: 24px;
 $navigation-menu-button-icon-margin-left: 8px;
 $navigation-menu-icon-line-height: 40px;
-$navigation-menu-item-underline: -2px;
+$navigation-menu-item-underline: 15px;
 $navigation-menu-wrapper-height: auto;
 $navigation-menu-wrapper-width: 100%;
 $navigation-menu-wrapper-left:0;
@@ -39,7 +39,7 @@ $navigation-menu-placeholder-image-height:330px;
     --msv-nav-dropdown-border: transparent;
     --msv-nav-carot-color: var(--msv-font-primary-color);
     --msv-nav-font-color: var(--msv-font-primary-color);
-    --msv-nav-font-size: var(--msv-body-font-size-m);
+    --msv-nav-font-size: var(--msv-body-font-size-xxs);
     --msv-nav-font-family: #{$msv-primary-font-family};
     --msv-nav-title-font-size: var(--msv-body-font-size-l);
 }
@@ -338,7 +338,7 @@ $navigation-menu-placeholder-image-height:330px;
                 > .ms-nav__list__item__span {
                     @include vfi();
                     @include font-content(var(--msv-font-weight-normal),var(--msv-body-font-size-xxs), $msv-line-height-l);
-                    align-items: flex-end;
+                   
                     background-color: var(--msv-nav-bg);
                     border: none;
                     color: var(--msv-nav-font-color);

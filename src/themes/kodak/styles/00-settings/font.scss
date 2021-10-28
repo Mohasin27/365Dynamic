@@ -77,7 +77,7 @@ $font-size: $msv-font-size-xs, $line-height: $msv-line-height-s) {
 }
 
 @mixin font-content-m($font-weight: $msv-font-weight-normal) {
-    @include font-content($font-weight, $msv-font-size-m, $msv-line-height-m);
+    @include font-content($font-weight, $msv-font-size-xs, $msv-line-height-m);
 }
 
 @mixin font-content-m-underline($font-weight: $msv-font-weight-normal) {
