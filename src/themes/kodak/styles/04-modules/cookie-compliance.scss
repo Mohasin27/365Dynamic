@@ -10,6 +10,11 @@ $cookie-compliance_accept-btn-width: 160px;
 // mobile
 $cookie-compliance_accept-btn-width-mobile: 243px;
 $cookie-compliance_accept-content-margin-bottom-mobile:24px;
+$cookie-compliance_modal-padding-top:100px;
+$cookie-compliance_modal-width:100%;
+$cookie-compliance_modal-height:100%;
+$cookie-compliance_modal-content-padding:20px;
+$cookie-compliance_modal-content-width:80%;
 
 // style preset
 :root {
@@ -73,6 +78,27 @@ $cookie-compliance_accept-content-margin-bottom-mobile:24px;
         font-size: var(--msv-cookie-compliance-font-size);
     }
 }
+
+.ms-modal {
+    position: fixed; 
+    z-index: 1; 
+    padding-top: $cookie-compliance_modal-padding-top; 
+    left: 0;
+    top: 0;
+    width: $cookie-compliance_modal-width;
+    height: $cookie-compliance_modal-height; 
+    overflow: auto; 
+    background-color: $msv-black; 
+    background-color: $msv-modal-overlay; //0.4
+  }
+
+  .ms-modal-content {
+    background-color: $msv-modal-content-bg-color;
+    margin: auto;
+    padding: 20px;
+    width: $cookie-compliance_modal-content-width;
+  }
+ 
 
 @media (max-width: $msv-breakpoint-m) {
     .ms-cookie-compliance {

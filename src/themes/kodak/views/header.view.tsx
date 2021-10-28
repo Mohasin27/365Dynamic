@@ -4,12 +4,15 @@
  *--------------------------------------------------------------*/
 
 /* eslint-disable no-duplicate-imports */
+
 import { AsyncResult } from '@msdyn365-commerce/core';
 import { Customer } from '@msdyn365-commerce/retail-proxy';
 import { IHeaderViewProps } from '@msdyn365-commerce-modules/header';
 import { Collapse, Drawer, Module, Node } from '@msdyn365-commerce-modules/utilities';
 import classnames from 'classnames';
 import * as React from 'react';
+
+
 
 const headerView: React.FC<IHeaderViewProps> = props => {
     const {
@@ -18,12 +21,20 @@ const headerView: React.FC<IHeaderViewProps> = props => {
         HeaderTopBarContainer,
         Divider
     } = props;
+    
+    if (document != null) {
+        var cookieDiv = document.querySelector(".ms-cookie-compliance");
+        var cookieContent = document.querySelector(".ms-cookie-compliance__container");
+        cookieDiv?.classList.add("ms-modal");
+        cookieContent?.classList.add("ms-modal-content");
+    }
     return (
         <Module {...HeaderTag}>
             <Node {...HeaderContainer}>
+                
                 <Node {...HeaderTopBarContainer}>
                     {props.navIcon}
-                    {props.logo}
+                    {props.logo}                    
                     {_renderReactFragment(props.search)}
                     {props.preferredStore}
                     {_renderAccountBlock(props, false)}
@@ -38,6 +49,7 @@ const headerView: React.FC<IHeaderViewProps> = props => {
                 </Node>
             </Node>
         </Module>
+
     );
 };
 
@@ -48,7 +60,7 @@ function _renderCollapseMenu(props: IHeaderViewProps): JSX.Element | null {
             <Node {...MobileMenuLinksContainer}>
                 {_renderReactFragment(props.search)}
                 {_renderMobileAccountBlock(props, true)}
-                { props.wishListIconMobile }
+                {props.wishListIconMobile}
                 {props.siteOptions}
             </Node>
             <Node {...Divider} />
@@ -83,7 +95,7 @@ function _renderMobileAccountBlock(props: IHeaderViewProps, renderForMobile: boo
                     className={accountClassName} openGlyph='ms-header__drawer-open' closeGlyph='ms-header__drawer-close'
                     glyphPlacement='end' toggleButtonText={renderCustomerName(data.accountInformation)}>
                     <div>
-                        { accountLinks ? accountLinks.map((link: React.ReactNode) => link) : false }
+                        {accountLinks ? accountLinks.map((link: React.ReactNode) => link) : false}
                         {signOutLink}
                     </div>
                 </Drawer>
@@ -116,7 +128,7 @@ function _renderAccountBlock(props: IHeaderViewProps, renderForMobile: boolean):
                 <Node {...AccountInfoDropdownParentContainer} className={accountClassName}>
                     {accountInfoDropdownButton}
                     <Node {...AccountInfoDropdownPopoverConentContainer}>
-                        { accountLinks ? accountLinks.map((link: React.ReactNode) => link) : false }
+                        {accountLinks ? accountLinks.map((link: React.ReactNode) => link) : false}
                         {signOutLink}
                     </Node>
                 </Node>
