@@ -14,7 +14,7 @@ $header-mobile-height: 48px;
 $header-icon-width: 48px;
 $account-link-height: 35px;
 $account-links-max-width: 276px;
-$signin-link-padding: 0 20px;
+$signin-link-padding: 0 5px;
 $signin-link-height: 48px;
 $header_container-max-width: $msv-breakpoint-xl;
 $header-myaccount-margin-left: 8px;
@@ -39,7 +39,7 @@ $header-store-selector-btn-padding: 12px 10px;
     --msv-header-bg: var(--msv-bg-color);
     --msv-header-border: var(--msv-border-color);
     --msv-header-font-color: var(--msv-font-primary-color);
-    --msv-header-font-size: var(--msv-body-font-size-m);
+    --msv-header-font-size: var(--msv-body-font-size-xxs);
 }
 
 header {
@@ -126,6 +126,7 @@ header {
 
     .ms-search__form-control,
     .ms-search__form-cancelSearch {
+        font-size:var(---msv-header-font-size);
         &:focus {
             outline-offset: -1px;
         }
@@ -177,7 +178,7 @@ header {
         a {
             align-items: center;
             display: flex;
-            font-size: $msv-text-size;
+            font-size: $msv-font-size-xxs;
             line-height: $msv-text-line-height;
             padding: $signin-link-padding;
             height: $signin-link-height;

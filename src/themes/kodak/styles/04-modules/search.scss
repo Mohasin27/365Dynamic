@@ -190,6 +190,7 @@ $search-form-inactive-width-mobile: 48px;
 
             &-control {
                 max-width: $search-form-control-max-width;
+                border:1px solid $search-autoSuggest-categoryResults-title-color;
             }
         }
 

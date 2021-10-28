@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-$msv-primary-font-family: 'Open Sans', sans-serif;;
-$msv-font-assistant: 'Open Sans', sans-serif;;
-$msv-font-allerta: 'Open Sans', sans-serif;;
+$msv-primary-font-family: 'Open Sans', sans-serif;
+$msv-font-assistant: 'Open Sans', sans-serif;
+$msv-font-allerta: 'Open Sans', sans-serif;
 $msv-font-cinzel: Times, "Times New Roman", serif;
 $msv-font-weight-bold: bold;
 $msv-font-weight-normal: normal;
 $msv-font-weight-light: 300;
+$msv-font-weight-Xlight: 100;
 $msv-font-weight-heavy: 600;
 
 $msv-heading-text-size: 20px;
 $msv-heading-line-height: 28px;
 
+$msv-font-size-xxs: 11px;
+$msv-font-size-xs: 12px;
 $msv-font-size-s: 14px;
 $msv-font-size-m: 16px;
 $msv-font-size-l: 18px;
@@ -37,7 +40,7 @@ $msv-text-line-height: 20px;
 
 @mixin kodak-font(
     $font-weight: $msv-font-weight-normal,
-    $font-size: $msv-font-size-s,
+    $font-size: $msv-font-size-xs,
     $line-height: $msv-line-height-s,
     $text-transform: none,
     $font-family: $msv-font-assistant
@@ -50,12 +53,12 @@ $msv-text-line-height: 20px;
 }
 
 @mixin font-content($font-weight: $msv-font-weight-normal,
-$font-size: $msv-font-size-s, $line-height: $msv-line-height-s, $text-transform: none) {
+$font-size: $msv-font-size-xs, $line-height: $msv-line-height-s, $text-transform: none) {
     @include kodak-font($font-weight, $font-size, $line-height, $text-transform);
 }
 
 @mixin font-content-underline($font-weight: $msv-font-weight-normal,
-$font-size: $msv-font-size-s, $line-height: $msv-line-height-s) {
+$font-size: $msv-font-size-xs, $line-height: $msv-line-height-s) {
     text-decoration-line: underline;
 
     @include font-content($font-weight, $font-size, $msv-line-height-m);
@@ -66,15 +69,15 @@ $font-size: $msv-font-size-s, $line-height: $msv-line-height-s) {
 }
 
 @mixin font-content-s-uppercase($font-weight: $msv-font-weight-normal) {
-    @include font-content($font-weight, $msv-font-size-s, $msv-line-height-s, uppercase);
+    @include font-content($font-weight, $msv-font-size-xs, $msv-line-height-s, uppercase);
 }
 
 @mixin font-content-s-height-l($font-weight: $msv-font-weight-normal) {
-    @include font-content($font-weight, $msv-font-size-s, $msv-line-height-l);
+    @include font-content($font-weight, $msv-font-size-xs, $msv-line-height-l);
 }
 
 @mixin font-content-m($font-weight: $msv-font-weight-normal) {
-    @include font-content($font-weight, $msv-font-size-m, $msv-line-height-m);
+    @include font-content($font-weight, $msv-font-size-xs, $msv-line-height-m);
 }
 
 @mixin font-content-m-underline($font-weight: $msv-font-weight-normal) {
@@ -147,6 +150,8 @@ $line-height: $msv-title-line-height-xs, $font-family: $msv-font-allerta) {
     --msv-heading-font-size-xl: #{$msv-title-font-size-l};
 
     // Body
+    --msv-body-font-size-xxs: #{$msv-font-size-xxs};
+    --msv-body-font-size-xs: #{$msv-font-size-xs};
     --msv-body-font-size-s: #{$msv-font-size-s};
     --msv-body-font-size-m: #{$msv-font-size-m};
     --msv-body-font-size-l: #{$msv-font-size-l};
@@ -157,5 +162,6 @@ $line-height: $msv-title-line-height-xs, $font-family: $msv-font-allerta) {
     --msv-font-weight-bold: #{$msv-font-weight-bold};
     --msv-font-weight-normal: #{$msv-font-weight-normal};
     --msv-font-weight-light: #{$msv-font-weight-light};
+    --msv-font-weight-xlight: #{$msv-font-weight-Xlight};
     --msv-font-weight-heavy: #{$msv-font-weight-heavy};
 }
