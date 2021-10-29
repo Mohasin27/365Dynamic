@@ -22,12 +22,13 @@ const headerView: React.FC<IHeaderViewProps> = props => {
         Divider
     } = props;
     
-    if (document != null) {
+    if (typeof window !== 'undefined') {
         var cookieDiv = document.querySelector(".ms-cookie-compliance");
         var cookieContent = document.querySelector(".ms-cookie-compliance__container");
         cookieDiv?.classList.add("ms-modal");
         cookieContent?.classList.add("ms-modal-content");
     }
+    
     return (
         <Module {...HeaderTag}>
             <Node {...HeaderContainer}>
