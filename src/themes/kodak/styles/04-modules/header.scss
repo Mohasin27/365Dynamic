@@ -25,7 +25,7 @@ $header-icon-padding-left: 10px;
 $header-cart-icon-margin-left: 4px;
 $header-list-item-link-padding: 0 20px;
 $popover-menu-item-height: 48px;
-$msv-default-container-padding-bottom: 25px;
+$msv-default-container-padding-bottom:10px;
 $divider-margin-left: 8px;
 $divider-margin-right: 8px;
 $divider-margin-width: 1px;
@@ -181,7 +181,7 @@ header {
             font-size: $msv-font-size-xxs;
             line-height: $msv-text-line-height;
             padding: $signin-link-padding;
-            height: $signin-link-height;
+            //height: $signin-link-height;
 
             &:hover {
                 text-decoration: none;
