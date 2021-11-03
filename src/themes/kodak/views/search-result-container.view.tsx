@@ -10,7 +10,7 @@ import * as React from 'react';
 
 const SearchResultContainerView: React.FC<ISearchResultContainerViewProps> = props => {
     const { SearchResultContainer, products, pagination, ProductsContainer, ProductSectionContainer, choiceSummary, isMobile, modalToggle, searchResultModal, TitleViewProps,
-        refineMenu, categoryHierarchy, sortByOptions, CategoryNavContainer, RefineAndProductSectionContainer, errorMessage, FeatureSearchContainer, similarLookProduct } = props;
+        refineMenu, categoryHierarchy, sortByOptions, /*CategoryNavContainer ,*/ RefineAndProductSectionContainer,  errorMessage, FeatureSearchContainer, similarLookProduct } = props;
     const isRecoSearchPage = props.context.actionContext.requestContext.query?.recommendation;
     if (isMobile) {
         return (
@@ -32,17 +32,17 @@ const SearchResultContainerView: React.FC<ISearchResultContainerViewProps> = pro
         );
     }
     return (
+        <>
         <Module {...SearchResultContainer}>
-            {categoryHierarchy &&
-            <Node {...CategoryNavContainer}>
-                {renderCategoryHierarchy(categoryHierarchy)}
-            </Node>}
+                {categoryHierarchy && renderCategoryHierarchy(categoryHierarchy)}
+                {/*renderTitle(TitleViewProps)*/}<br />
+                {choiceSummary}
+                {modalToggle}<br />
             <Node {...RefineAndProductSectionContainer}>
-                {refineMenu && renderRefiner(refineMenu)}
                 <Node {...ProductSectionContainer}>
-                    <Node {...FeatureSearchContainer}>
+                    {/*<Node {...FeatureSearchContainer}>
                         {similarLookProduct}
-                    </Node>
+                    </Node>*/}
                     <div className='ms-search-result-wrapper-title-choice-summary'>
                         {TitleViewProps && renderTitle(TitleViewProps)}
                         {choiceSummary}
@@ -50,14 +50,33 @@ const SearchResultContainerView: React.FC<ISearchResultContainerViewProps> = pro
                     <div className='ms-search-result-wrapper-sort-by-category'>
                         {sortByOptions && !isRecoSearchPage && renderSort(sortByOptions)}
                     </div>
+                    {createSearchResultModal(searchResultModal, refineMenu, sortByOptions, isRecoSearchPage)}
                     <Node {...ProductsContainer}>
                         {errorMessage}
                         {products}
                     </Node>
                     {pagination}
                 </Node>
+                {refineMenu && renderRefiner(refineMenu)}
             </Node>
-        </Module>
+            </Module>
+            
+            {/*<Module {...SearchResultContainer}>
+            {categoryHierarchy && renderCategoryHierarchy(categoryHierarchy)}
+            {renderTitle(TitleViewProps)}
+            {choiceSummary}
+            {modalToggle}
+            {createSearchResultModal(searchResultModal, refineMenu, sortByOptions, isRecoSearchPage)}
+             <Node {...FeatureSearchContainer}>
+                {similarLookProduct}
+             </Node> 
+            <Node {...ProductsContainer}>
+                {errorMessage}
+                {products}
+            </Node> 
+            {pagination}
+        </Module>*/}
+    </>
     );
 
 };
@@ -98,9 +117,11 @@ const renderSort = (props: ISortByViewProps, isRecoSearchPage?: string): JSX.Ele
     const { SortingContainer, sortByDropDown } = props;
     if (sortByDropDown && !isRecoSearchPage) {
         return (
+            <>
             <Node {...SortingContainer}>
                 {sortByDropDown}
             </Node>
+            </>
         );
     }
     return null;
@@ -130,7 +151,7 @@ const renderTitle = (props: ITitleViewProps): JSX.Element | null => {
         return (
             <Node {...TitleContainer}>
                 <h2>
-                    {title.titlePrefix}
+                    {/*title.titlePrefix*/}
                     {title.titleText}
                     (
                     {title.titleCount}
