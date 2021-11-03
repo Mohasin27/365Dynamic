@@ -4,6 +4,7 @@ $search-result-container-nav-margin-top: 32px;
 $search-result-container-nav-title-margin: 0;
 $search-result-container-refine-product-margin-bottom: 80px;
 $search-result-container-refiner-section-padding-right: 40px;
+$search-result-container-refiner-section-padding: 20px;
 $search-result-container-refiner-section-width: 25%;
 $search-result-container-refiner-button-submenu-height: 64px;
 $search-result-container-refiner-button-submenu-padding-left: 0;
@@ -105,11 +106,11 @@ $search-result-list-item-width: 314px;
 
     //Refiner heading
     --msv-refiner-heading-font-color: var(--msv-font-primary-color);
-    --msv-refiner-heading-font-size: var(--msv-body-font-size-l);
+    --msv-refiner-heading-font-size: var(--msv-body-font-size-xs);
 
     //Refiner values
     --msv-refiner-values-font-color: var(--msv-font-primary-color);
-    --msv-refiner-values-font-size: var(--msv-body-font-size-m);
+    --msv-refiner-values-font-size: var(--msv-body-font-size-xs);
 
     //border
     --msv-refiner-border: #{$msv-gray-300};
@@ -156,8 +157,9 @@ $search-result-list-item-width: 314px;
 
 // refiner section
 .ms-search-result-container__refiner-section {
+    background: #f1f1f1;
     display: block;
-    padding-right: $search-result-container-refiner-section-padding-right;
+    padding: $search-result-container-refiner-section-padding;
     width: $search-result-container-refiner-section-width;
 
     .collapse:not(.show) {
@@ -168,7 +170,7 @@ $search-result-list-item-width: 314px;
     .ms-refine-submenu__toggle_expanded {
         background: transparent;
         color: var(--msv-refiner-heading-font-color);
-        font-size: var(--msv-refiner-heading-font-size);
+        font-size:14px;
         display: flex;
         justify-content: space-between;
         padding-left: $search-result-container-refiner-button-submenu-padding-left;
@@ -694,6 +696,7 @@ ul.msc-pagination {
             border-style: none;
             float: right;
             font-weight: bold;
+            display:none;
         }
 
         .msc-button:hover {
