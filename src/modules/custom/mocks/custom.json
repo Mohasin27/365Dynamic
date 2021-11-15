@@ -1,0 +1,47 @@
+{
+	"id": "CookieComplianceModule",
+	"config": {
+		"content": "This site uses cookies for analytics, personalized content and ads. By continuing to browse this site, you agree to this use.",
+		"actionLinks": [
+			{
+				"linkText": "Learn more",
+				"linkUrl": {
+					"destinationUrl": "https://go.microsoft.com/fwlink/?linkid=845480"
+				},
+				"ariaLabel": "Learn more about cookie compliance",
+				"openInNewTab": true
+			}
+		]
+	},
+	"resources": {
+		"acceptCookiesButtonText": "Accept",
+		"acceptCookiesAriaLabel": ""
+	},
+	"context": {
+		"request": {
+			"query": {
+				"onum": "9234592138",
+				"email": "mockemail@fabrikam.com"
+			},
+			"user": {
+				"token": "",
+				"isAuthenticated": true,
+				"signInUrl": "",
+				"signOutUrl": "",
+				"signinName": null,
+				"name": null,
+				"emailAddress": "test@outlook.com"
+			}
+		},
+		"actionContext": {
+			"id": "T1",
+			"requestContext": {
+				"locale": "en-us",
+				"apiSettings": {
+					"channelId": 0
+				}
+			}
+		}
+	},
+	"typeName": "custom"
+}

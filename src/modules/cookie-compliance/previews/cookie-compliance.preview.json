@@ -1,0 +1,28 @@
+{
+	"id": "cookieComplianceModule",
+	"config": {
+		"content": "${cookieCompliance_content}",
+		"actionLinks": [
+			{
+				"linkText": "${cookieCompliance_link}",
+				"linkUrl": {
+					"destinationUrl": "#",
+					"type": "externalLink"
+				},
+				"ariaLabel": "${cookieCompliance_ariaLabel}"
+			}
+		]
+	},
+	"resources": {
+		"cookieCompliance_content": {
+			"value": "<p>Sample content</p>"
+		},
+		"cookieCompliance_link": {
+			"value": "Link"
+		},
+		"cookieCompliance_ariaLabel": {
+			"value": "Link"
+		}
+	},
+	"typeName": "cookie-compliance"
+}

@@ -1,0 +1,40 @@
+{
+	"$type": "contentModule",
+	"friendlyName": "Cookie consent (COPY)",
+	"name": "custom",
+	"description": "Cookie consent module allows users to consent for cookie usage on the site",
+	"categories": [
+		"Compliance"
+	],
+	"config": {
+		"content": {
+			"friendlyName": "Rich text",
+			"description": "Text to display in the module",
+			"type": "richText"
+		},
+		"actionLinks": {
+			"type": "array",
+			"friendlyName": "Links",
+			"description": "Link to display inline with the text ",
+			"items": {
+				"$ref": "@msdyn365-commerce-modules/definitions/dist/src/ActionLink.json#/definitions/actionLink"
+			}
+		},
+		"className": {
+			"friendlyName": "Custom CSS class name",
+			"description": "Provide a custom css class name defined in the theme pack to target the CSS for this module",
+			"type": "string",
+			"default": ""
+		}
+	},
+	"resources": {
+		"acceptCookiesButtonText": {
+			"comment": "Text for the accept cookies button",
+			"value": "Accept"
+		},
+		"acceptCookiesAriaLabel": {
+			"comment": "Aria label for the accept cookies button",
+			"value": "Accept cookies"
+		}
+	}
+}

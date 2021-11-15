@@ -34,12 +34,16 @@ $cart-lines-group-heading-padding-top: 12px;
 $cart-lines-group-heading-padding-left: 76px;
 $cart-line-group-extra-action-margin-top: 75px;
 $cart-line-group-extra-action-margin-left: 200px;
-
+$cart-subheading-bottom: 10px;
+$cart-subheading-top: 22px;
 //style presets
 :root {
     // heading
     --msv-cart-heading-font-size: var(--msv-heading-font-size-s);
     --msv-cart-heading-font-color: var(--msv-font-primary-color);
+    // sub heading
+    --msv-cart-subheading-font-size: var(--msv-heading-font-size-s);
+    --msv-cart-subheading-font-color: var(--msv-font-primary-color);
 }
 
 .msc-cart__btn-checkout,
@@ -81,6 +85,15 @@ $cart-line-group-extra-action-margin-left: 200px;
         flex: 0 0 100%;
         margin-bottom: $cart-heading-bottom;
         margin-top: $cart-heading-top;
+    }
+
+    .msc-cart__subheading {
+        @include font-content(var(--msv-font-weight-light),
+        var(--msv-cart-heading-font-size), $msv-title-line-height-xs);
+        color: var(--msv-cart-heading-font-color);
+        flex: 0 0 100%;
+        margin-bottom: $cart-subheading-bottom;
+        margin-top: $cart-subheading-top;
     }
 
     .msc-cart__promotion {

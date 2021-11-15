@@ -17,13 +17,17 @@ import { Button, getPayloadObject, getTelemetryAttributes, INodeProps, ITelemetr
 import * as React from 'react';
 
 const CartView: React.FC<ICartViewProps> = (props: ICartViewProps) => (
+   
     <div className={props.className} id={props.id} {...props.renderModuleAttributes(props)}>
         {props.title}
+        {<p style={{fontSize:"20px"}}>{props.productExpirationMessage}</p>}       
         {props.promotionOptions && _renderPromotions(props.promotionOptions)}
+       
         {props.multiplePickUpEnabled ? _renderCartLinesGroup(props, props.resources) : <Node {...props.CartlinesWrapper}>
             {_renderCartlines(props.cartlines, props.resources, props.storeSelector, props.backToShoppingButton, props.waitingComponent, props.cartLoadingStatus,
                 props.cartDataResult, props.telemetryContent, props.multiplePickUpEnabled, props.context.actionContext.requestContext.channel?.EmailDeliveryModeCode)}
         </Node>}
+        
         {props.orderSummaryHeading &&
             <Node {...props.OrderSummaryWrapper}>
                 {props.orderSummaryHeading}
@@ -35,6 +39,7 @@ const CartView: React.FC<ICartViewProps> = (props: ICartViewProps) => (
                 {props.createTemplateFromCartButton}
             </Node>}
         {props.storeSelector}
+        
     </div>
 );
 
@@ -185,6 +190,8 @@ const _renderOrderSummarylines = (orderSummaryLines: IOrderSummaryLines | undefi
     if (!orderSummaryLines) {
         return null;
     }
+    console.log(props);
+    console.log(orderSummaryLines)
     return (
         <Node {...OrderSummaryItems}>
             {props.promoCode}
@@ -194,6 +201,7 @@ const _renderOrderSummarylines = (orderSummaryLines: IOrderSummaryLines | undefi
             {orderSummaryLines.tax}
             {orderSummaryLines.totalDiscounts ? orderSummaryLines.totalDiscounts : null}
             {orderSummaryLines.orderTotal}
+
         </Node>
     );
 };
