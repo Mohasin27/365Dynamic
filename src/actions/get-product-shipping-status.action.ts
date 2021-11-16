@@ -46,7 +46,7 @@ const createInput = (args: Msdyn365.ICreateActionContext, id : any): Msdyn365.IA
  */
 async function action(id: any, ctx: Msdyn365.IActionContext): Promise<IGetProductShippingStatusData> {
     // const apiSettings = Msdyn365.msdyn365Commerce.apiSettings;
-     debugger;
+    debugger;
     // TODO: Uncomment the below line to get the value from a service
     // const response = await Msdyn365.sendRequest<IGetProductShippingStatusData[]>('/get/example/id/1', 'get');
     return { text: 'Static data from action' + id.id };

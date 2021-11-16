@@ -17,7 +17,7 @@ import { AsyncResult,
 } from '@msdyn365-commerce/retail-proxy';
 import { IStoreSelectorStateManager } from '@msdyn365-commerce-modules/bopis-utilities';
 import { IDimensionForSelectedVariant, IProductInventoryInformation, OrderTemplate } from '@msdyn365-commerce-modules/retail-actions';
-
+import { IGetProductDealData } from '../../actions/get-product-deal.action';
 /**
  * Interface for BuyBox data.
  */
@@ -35,4 +35,6 @@ export interface IBuyboxData {
     customerInformation: AsyncResult<Customer>;
     featureState: AsyncResult<FeatureState[]>;
     channelDeliveryOptionConfig: AsyncResult<ChannelDeliveryOptionConfiguration>;
+    dealOfTheDay: AsyncResult<IGetProductDealData>;
+    
 }

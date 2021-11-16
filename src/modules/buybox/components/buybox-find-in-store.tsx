@@ -51,6 +51,12 @@ export interface IBuyboxFindInStoreViewProps {
     openFindInStoreDialog(): Promise<void>;
 }
 
+export interface IDealOfTheDayDivProps {
+    ContainerProps: INodeProps;
+    div?: React.ReactNode;
+    isDealValid: boolean;
+}
+
 /**
  * On click find store handler.
  * @param props -Buybox data.
@@ -61,6 +67,10 @@ export interface IBuyboxFindInStoreViewProps {
 const onClickFindInStoreHandler = (props: IBuyboxProps<IBuyboxData>, state: IBuyboxState, callbacks: IBuyboxCallbacks) => async () => {
     await findInStoreOnClick(props, state, callbacks);
 };
+
+// const onClickShippingStatusHandler = (callbacks: IBuyboxCallbacks) => async () => {
+//     await findInStoreOnClick(callbacks);
+// };
 
 /**
  * Inventory settings based on the inventory policy for aggregated availability.
@@ -348,6 +358,7 @@ export function getBuyboxFindInStore(
 }
 
 async function findInStoreOnClick(props: IBuyboxProps<IBuyboxData>, state: IBuyboxState, callbacks: IBuyboxCallbacks): Promise<void> {
+   debugger;
     const {
         data: {
             storeSelectorStateManager: { result: storeSelectorStateManager },
@@ -495,3 +506,30 @@ async function findInStoreOnClick(props: IBuyboxProps<IBuyboxData>, state: IBuyb
     }
 
 }
+
+
+
+export function getDealOfTheDayDiv(props: IBuyboxProps<IBuyboxData>): IDealOfTheDayDivProps | undefined{
+
+    const { data} = props;
+    
+    let finalPrice =  data.product.result?.Price == undefined ? 0 : data.product.result?.Price ;
+    finalPrice = data?.dealOfTheDay?.result?.expiredIn == 0 ? finalPrice : finalPrice - (finalPrice * .20)
+
+    return {
+        ContainerProps: {
+            className: 'ms-buybox__deal-of-the-day'
+        },
+        div: (
+            <div>
+               <label>Deal of the Day: $ {finalPrice}</label>
+               <p>Ends in {data && data?.dealOfTheDay?.result?.expiredIn} hours </p>
+            </div>
+        ),
+        isDealValid:   data?.dealOfTheDay?.result?.expiredIn == 0 ? false : true
+
+       
+    };
+}
+
+

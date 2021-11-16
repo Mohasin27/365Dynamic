@@ -56,6 +56,10 @@
 		"shippingStatus": {
 			"path": "../../actions/get-product-reviews.action",
             "runOn": "server"
+		},
+		"dealOfTheDay": {
+			"path": "../../actions/get-product-deal.action",
+            "runOn": "client"
 		}
 	},
 	"config": {
