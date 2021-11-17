@@ -521,7 +521,7 @@ export function getDealOfTheDayDiv(props: IBuyboxProps<IBuyboxData>): IDealOfThe
             className: 'ms-buybox__deal-of-the-day'
         },
         div: (
-            <div>
+            <div className="ms-buybox__deal-of-the-day-box">
                <label>Deal of the Day: $ {finalPrice}</label>
                <p>Ends in {data && data?.dealOfTheDay?.result?.expiredIn} hours </p>
             </div>
