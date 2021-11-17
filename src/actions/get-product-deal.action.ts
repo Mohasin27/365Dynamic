@@ -27,18 +27,18 @@ export interface IGetProductDealData {
     expiredIn: number;
 }
 
-export interface IProductDealData {
-    productId: string,
-    productSku: string,
-    productName: string,
-    productPrice: string,
-    productChannelId: string,
-    productChannelName: string
-    productCategoryId: string,
-    productCategoryName: string,
-    productQuantity: string,
-    productCurrency: string
-}
+// export interface IProductDealData {
+//     productId: string,
+//     productSku: string,
+//     productName: string,
+//     productPrice: string,
+//     productChannelId: string,
+//     productChannelName: string
+//     productCategoryId: string,
+//     productCategoryName: string,
+//     productQuantity: string,
+//     productCurrency: string
+// }
 
 
 

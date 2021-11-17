@@ -40,7 +40,7 @@ const BuyboxView: React.FC<IBuyboxViewProps & IBuyboxExtentionProps<IBuyboxData>
         telemetryContent, configure, description, findInStore, dealOfTheDay,
         quantity, price, title, rating, callbacks, state, resources, inventoryLabel, shopSimilarLook, keyInPrice,
         quantityLimitsMessages, max, shopSimilarDescription, unitOfMeasure } = props;
-        let [shippingStatus, setStaticContent] = useState('');
+        //let [shippingStatus, setStaticContent] = useState('');
      console.log(props);
      const test2 = () =>{
         console.log("test2 has been called")
@@ -199,7 +199,7 @@ const _renderShippingStatus = (findInStore: IBuyboxFindInStoreViewProps, actionC
     test2();
     return (
 
-        <button  onClick={() => test("44",actionContext)}/>
+        <button className='ms-buybox__find-in-store-button' color="primary" onClick={() => test("44",actionContext)}>Check Shipping Status</button>
     );
 };
 

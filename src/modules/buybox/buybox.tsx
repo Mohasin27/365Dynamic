@@ -222,6 +222,8 @@ class Buybox extends React.PureComponent<IBuyboxProps<IBuyboxData>, IBuyboxState
             }
         );
 
+        console.log(getBuyboxAddToCart(
+            props, this.state, this.buyboxCallbacks, defaultMinimumKeyInPrice, defaultMaximumKeyInPrice, undefined, hasAvailableProducts))
         const viewProps: IBuyboxViewProps = {
             ...(this.props as IBuyboxProps<IBuyboxData>),
             state: this.state,

@@ -53,10 +53,7 @@
 			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-channel-delivery-option-configuration",
 			"runOn": "server"
 		},
-		"shippingStatus": {
-			"path": "../../actions/get-product-reviews.action",
-            "runOn": "server"
-		},
+		
 		"dealOfTheDay": {
 			"path": "../../actions/get-product-deal.action",
             "runOn": "client"

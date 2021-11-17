@@ -1,0 +1,7 @@
+{
+    "CacheObjectType": "ProductShippingStatus",
+    "CacheKey": "ProductShippingStatus",
+    "Mock": {
+        "text": "bar"      
+    }
+}

@@ -6,8 +6,8 @@
     "categories": ["product-feature"],
     "tags": ["Additional tags go here"],
     "dataActions": { 
-        "product": {
-            "path": "../../actions/get-product-reviews.action",
+        "categories": {
+            "path": "../../actions/get-categories.action",
             "runOn": "server"
         }       
     },    

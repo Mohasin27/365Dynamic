@@ -22,8 +22,8 @@ export class GetProductShippingStatusInput implements Msdyn365.IActionInput {
     
     // TODO: Determine if the results of this get action should cache the results and if so provide
     // a cache object type and an appropriate cache key
-    public getCacheKey = () => `TODO`;
-    public getCacheObjectType = () => 'TODO';
+    public getCacheKey = () => `ProductShippingStatus`;
+    public getCacheObjectType = () => 'ProductShippingStatus';
     public dataCacheType = (): Msdyn365.CacheType => 'application';
 
 
@@ -38,6 +38,7 @@ export interface IGetProductShippingStatusData {
  * TODO: Use this function to create the input required to make the action call
  */
 const createInput = (args: Msdyn365.ICreateActionContext, id : any): Msdyn365.IActionInput => {
+    debugger
     return new GetProductShippingStatusInput(id);
 };
 
@@ -49,7 +50,7 @@ async function action(id: any, ctx: Msdyn365.IActionContext): Promise<IGetProduc
     debugger;
     // TODO: Uncomment the below line to get the value from a service
     // const response = await Msdyn365.sendRequest<IGetProductShippingStatusData[]>('/get/example/id/1', 'get');
-    return { text: 'Static data from action' + id.id };
+    return { text: 'Static data from action ' + id.id };
 }
 
 export default Msdyn365.createObservableDataAction({

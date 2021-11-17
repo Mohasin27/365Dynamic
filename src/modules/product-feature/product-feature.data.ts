@@ -7,5 +7,6 @@ import { AsyncResult, Category } from '@msdyn365-commerce/retail-proxy';
 
 
 export interface IProductFeatureData {
-    products: AsyncResult<Category[]>;
+    categories: AsyncResult<Category[]>;
+
 }
