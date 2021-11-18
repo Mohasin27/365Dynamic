@@ -357,7 +357,8 @@ export class NavigationMenuView extends React.PureComponent<INavigationMenuViewP
             <Node
                 key={index}
                 {...Button}
-                onClick={this._handleDropdownToggle(option, activeMenu)}
+               
+                onMouseOver={this._handleDropdownToggle(option, activeMenu)}
                 onFocus={this._closeSubmenu}
                 aria-haspopup={!(this.state.activeMenu && this.state.activeMenu === option.id)}
                 aria-expanded={!!(this.state.activeMenu && this.state.activeMenu === option.id)}
