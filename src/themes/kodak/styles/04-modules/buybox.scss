@@ -73,6 +73,38 @@ $buybox-custom-amount-input-padding:5px;
         margin-bottom: 8px;
     }
 
+    &__deal-of-the-day-box {
+        @include button-default();
+        @include secondary-button( var(--msv-buybox-secondary-btn-bg), var(--msv-buybox-secondary-btn-font-color), var(--msv-buybox-secondary-btn-border));
+        font-size: var(--msv-buybox-btn-font-size);
+        line-height: $msv-line-height-l;
+        height: unset;
+        position: relative;
+        color: #19a596;
+        font-weight: bold;
+        text-align:left; 
+        padding-left:80px;
+
+        &:before {
+            font-family: "Font Awesome 5 Free";
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 900;
+            text-rendering: auto;
+            line-height: 1;
+            vertical-align: text-bottom;
+            content: "\f017";
+            position: absolute;
+            left: 20px;
+            color: #19a596;
+            font-size: 40px;
+            top: 15px;
+        }
+    }
+
     &__inventory-label {
         @include font-content(var(--msv-font-weight-normal), var(--msv-body-font-size-l), $msv-line-height-m);
     }
@@ -234,8 +266,7 @@ $buybox-custom-amount-input-padding:5px;
         margin-top: 0;
         margin-bottom: 1rem;
 
-        @include font-content(var(--msv-font-weight-normal),
-        var(--msv-buybox-text-font-size), $msv-line-height-m);
+        @include font-content(var(--msv-font-weight-normal), var(--msv-buybox-text-font-size), $msv-line-height-m);
     }
 
     .product-add-to-cart {
@@ -248,8 +279,7 @@ $buybox-custom-amount-input-padding:5px;
         }
 
         .msc-add-to-cart {
-            @include primary-button(var(--msv-buybox-primary-btn-bg),
-            var(--msv-buybox-primary-btn-font-color), var(--msv-buybox-primary-btn-border));
+            @include primary-button(var(--msv-buybox-primary-btn-bg), var(--msv-buybox-primary-btn-font-color), var(--msv-buybox-primary-btn-border));
             font-size: var(--msv-buybox-btn-font-size);
             line-height: $msv-line-height-l;
             flex-grow: 1;
@@ -262,8 +292,7 @@ $buybox-custom-amount-input-padding:5px;
 
         .msc-add-to-cart-extra-actions {
             @include font-glyph-standard();
-            @include secondary-button(var(--msv-buybox-secondary-btn-bg),
-            var(--msv-buybox-secondary-btn-font-color), var(--msv-buybox-secondary-btn-border));
+            @include secondary-button(var(--msv-buybox-secondary-btn-bg), var(--msv-buybox-secondary-btn-font-color), var(--msv-buybox-secondary-btn-border));
             color: var(--msv-buybox-btn-extra-actions-color);
             padding-left: 0;
             padding-right: 0;
@@ -327,11 +356,7 @@ $buybox-custom-amount-input-padding:5px;
 
     &__find-in-store-button {
         @include button-default();
-        @include secondary-button(
-            var(--msv-buybox-secondary-btn-bg),
-            var(--msv-buybox-secondary-btn-font-color),
-            var(--msv-buybox-secondary-btn-border));
-
+        @include secondary-button( var(--msv-buybox-secondary-btn-bg), var(--msv-buybox-secondary-btn-font-color), var(--msv-buybox-secondary-btn-border));
         font-size: var(--msv-buybox-btn-font-size);
         line-height: $msv-line-height-l;
         height: unset;
@@ -343,10 +368,7 @@ $buybox-custom-amount-input-padding:5px;
 
     &__shop-similar-looks-button {
         @include button-default();
-        @include secondary-button(
-            var(--msv-buybox-secondary-btn-bg),
-            var(--msv-buybox-secondary-btn-font-color),
-            var(--msv-buybox-secondary-btn-border));
+        @include secondary-button( var(--msv-buybox-secondary-btn-bg), var(--msv-buybox-secondary-btn-font-color), var(--msv-buybox-secondary-btn-border));
         font-size: var(--msv-buybox-btn-font-size);
         line-height: $msv-line-height-l;
         margin-bottom: 20px;
@@ -354,10 +376,7 @@ $buybox-custom-amount-input-padding:5px;
 
     &__shop-similar-descriptions-button {
         @include button-default();
-        @include secondary-button(
-            var(--msv-buybox-secondary-btn-bg),
-            var(--msv-buybox-secondary-btn-font-color),
-            var(--msv-buybox-secondary-btn-border));
+        @include secondary-button( var(--msv-buybox-secondary-btn-bg), var(--msv-buybox-secondary-btn-font-color), var(--msv-buybox-secondary-btn-border));
         font-size: var(--msv-buybox-btn-font-size);
         line-height: $msv-line-height-l;
     }
@@ -412,8 +431,7 @@ $buybox-custom-amount-input-padding:5px;
         }
 
         &__go-to-cart {
-            @include primary-button(var(--msv-buybox-primary-btn-bg),
-            var(--msv-buybox-primary-btn-font-color), var(--msv-buybox-primary-btn-border));
+            @include primary-button(var(--msv-buybox-primary-btn-bg), var(--msv-buybox-primary-btn-font-color), var(--msv-buybox-primary-btn-border));
             margin: $msv-dialog-modal-content-button-margin;
             width: $msv-dialog-button-width;
         }
@@ -481,7 +499,6 @@ $buybox-custom-amount-input-padding:5px;
             }
         }
     }
-
     //mobile vp
 
     @media (max-width: $msv-breakpoint-m) {
