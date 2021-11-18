@@ -7,53 +7,7 @@
 		"Product details",
 		"Buybox"
 	],
-	"dataActions": {
-		"product": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-selected-variant"
-		},
-		"productDimensions": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-dimensions-for-selected-variant"
-		},
-		"storeSelectorStateManager": {
-			"path": "@msdyn365-commerce-modules/bopis-utilities/dist/lib/store-selector-state-manager/store-selector-state-manager-data-action"
-		},
-		"productPrice": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-price-for-selected-variant"
-		},
-		"deliveryOptions": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-delivery-options-for-selected-variant"
-		},
-		"ratingsSummary": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-ratings-summary",
-			"runOn": "client"
-		},
-		"cart": {
-			"path": "@msdyn365-commerce/global-state/dist/lib/data-actions/cart-state-data-action",
-			"runOn": "server"
-		},
-		"orderTemplates": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/order-templates/get-order-templates-preview",
-			"runOn": "client"
-		},
-		"wishlists": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-wishlist-by-customer-id"
-		},
-		"productAvailableQuantity": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-product-availabilities-for-selected-variant",
-			"runOn": "server"
-		},
-		"customerInformation": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-customer"
-		},
-		"featureState": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-feature-state",
-			"runOn": "server"
-		},
-		"channelDeliveryOptionConfig": {
-			"path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-channel-delivery-option-configuration",
-			"runOn": "server"
-		},
-		
+	"dataActions": {		
 		"dealOfTheDay": {
 			"path": "../../actions/get-product-deal.action",
             "runOn": "client"
